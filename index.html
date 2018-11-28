@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Kelompok D</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="BHost template project">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="styles/bootstrap-4.1.2/bootstrap.min.css">
+<link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.carousel.css">
+<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
+<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/animate.css">
+<link rel="stylesheet" type="text/css" href="styles/main_styles.css">
+<link rel="stylesheet" type="text/css" href="styles/responsive.css">
+</head>
+<body>
+
+<div class="super_container">
+	<header class="header trans_400">
+		<div class="header_content d-flex flex-row align-items-center justify-content-start trans_400">
+			<div class="logo"><a href="#"><span>N</span>atural <span>L</span>anguage <span>P</span>rocessing</a></div>
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-10 offset-lg-2">
+						<nav class="main_nav">
+							<ul class="d-flex flex-row align-items-center justify-content-start">
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+			<div class="header_right d-flex flex-row align-items-center justify-content-start">
+
+				<div class="header_links">
+					<ul class="d-flex flex-row align-items-center justify-content-start">
+						<li><a href="#">Home</a></li>
+					</ul>
+				</div>
+			</div>	
+		</div>
+	</header>
+
+	<div class="home">
+		<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="images/index.jpg" data-speed="0.8"></div>
+		<div class="home_container">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<div class="home_content text-center">
+							<div class="home_icon ml-auto mr-auto d-flex flex-column align-items-center justify-content-center"><div><img src="images/indonesia.jpg" alt="indonesia.png"></div></div>
+							<div class="home_title">Klasifikasi Sentimen Pesawat Lion Air JT-610 Kelompok D</div>
+							<div class="domain_search">
+								<div class="domain_search_background"></div>
+								<form action="#" class="domain_search_form" id="domain_search_form">
+									<input type="text" class="domain_search_input" placeholder="Masukkan teks disini" required="required" id="category_predict">
+									<button class="domain_search_button" id="submit_text">tampilkan hasil</button>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="why">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="section_title_container text-center">
+						<div class="section_title"><h2>Hasil</h2></div>
+					</div>
+				</div>
+			</div>
+			<label id="predictResult">hasil</label>
+			<div class="row why_row">
+				
+				<!-- Why Item -->
+				<div class="col-lg-4">
+					<div class="icon_box_1 text-center">
+						<div class="icon_box_1_image ml-auto mr-auto"></div>
+						<div class="icon_box_1_title"></div>
+						<div class="icon_box_1_text">
+							<p></p>
+						</div>
+					</div>
+				</div>
+
+				<!-- Why Item -->
+				<div class="col-lg-4">
+					<div class="icon_box_1 text-center">
+						<p><b></b></p>
+					</div>
+				</div>
+
+				<!-- Why Item -->
+				<div class="col-lg-4">
+					<div class="icon_box_1 text-center">
+						<div class="icon_box_1_image ml-auto mr-auto"></div>
+						<div class="icon_box_1_title"></div>
+						<div class="icon_box_1_text">
+							<p></p>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<footer class="footer">
+		<div class="copyright_bar text-center"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+			Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+			<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></div>
+	</footer>
+</div>
+
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="styles/bootstrap-4.1.2/popper.js"></script>
+<script src="styles/bootstrap-4.1.2/bootstrap.min.js"></script>
+<script src="plugins/greensock/TweenMax.min.js"></script>
+<script src="plugins/greensock/TimelineMax.min.js"></script>
+<script src="plugins/scrollmagic/ScrollMagic.min.js"></script>
+<script src="plugins/greensock/animation.gsap.min.js"></script>
+<script src="plugins/greensock/ScrollToPlugin.min.js"></script>
+<script src="plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
+<script src="plugins/easing/easing.js"></script>
+<script src="plugins/progressbar/progressbar.min.js"></script>
+<script src="plugins/parallax-js-master/parallax.min.js"></script>
+<script src="js/custom.js"></script>
+
+<script>
+   
+	function fillInAddress() {
+	  // Get the place details from the autocomplete object.
+	  var place = autocomplete.getPlace();
+	  for (var component in componentForm) {
+		document.getElementById(component).value = '';
+		document.getElementById(component).disabled = false;
+	  }
+	  // Get each component of the address from the place details
+	  // and fill the corresponding field on the form.
+	  for (var i = 0; i < place.address_components.length; i++) {
+		var addressType = place.address_components[i].types[0];
+		if (componentForm[addressType]) {
+		  var val = place.address_components[i][componentForm[addressType]];
+		  document.getElementById(addressType).value = val;
+		}
+	  }
+	}
+  </script>
+
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&libraries=places&callback=initAutocomplete"
+	  async defer></script>
+
+  <script src="js/main.js"></script>
+
+  <script src="https://code.jquery.com/jquery-1.8.0.min.js"></script>
+		  <script type="text/javascript">
+			  $(document).ready(function(){
+				  $.ajaxSetup({
+				  headers: {
+					  'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+				  }
+			  });
+			  $('#submit_text').click(function(){
+				  $('#predictResult').empty();
+				  var text=$('#text_sentence').val();
+				  
+				  $.ajax({
+				  type: "POST",
+				  url:"https://kelompok-d.herokuapp.com/input/task",
+				  data:'{"textSentence":"'+text+'"}',
+				  contentType: 'application/json; charset=utf-8',
+				  dataType: "json",
+				  success:function(data){
+					  console.log(data);
+					  var dataTemp=data['message'];
+					  $('#predictResult').append(dataTemp);
+					  $('#category_predict').val(dataTemp);
+				  }
+			  });
+		  });
+	  });
+  </script>
+
+</body>
+</html>
